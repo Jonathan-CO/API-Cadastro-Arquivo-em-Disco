@@ -1,9 +1,9 @@
 {
-  "name": "api-cadastro-e-criacao-arquivo",
+  "name": "api-cadastro-arquivo-em-disco",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
-  "repository": "https://github.com/Jonathan-CO/API-Rest---Cadastro-de-Usu-rio-e-Cria-o-de-Arquivo-em-Disco.git",
+  "repository": "https://github.com/Jonathan-CO/API-Cadastro-Arquivo-em-Disco.git",
   "author": "Jonathan-CO <j_cunha_oliveira@hotmail.com>",
   "scripts": {
     "build": "tsc",
