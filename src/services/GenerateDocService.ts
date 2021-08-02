@@ -1,31 +1,18 @@
 import path from 'path';
 
-import {
-  IUserRepository,
-  ISessionRepository,
-  IGenerateRequest,
-  IGenerateDocService,
-  ISaveFile,
-} from '../protocols';
+import { IUserRepository, ISessionRepository, IGenerateRequest, IGenerateDocService, ISaveFile } from '../protocols';
 
 class GenerateDocService implements IGenerateDocService {
   private readonly userRepository: IUserRepository;
-
   private readonly sessionRepository: ISessionRepository;
-
   private readonly saveFileAgent: ISaveFile;
 
-  constructor(
-    userRepository: IUserRepository,
-    sessionRepository: ISessionRepository,
-    saveFileAgent: ISaveFile,
-  ) {
+  constructor( userRepository: IUserRepository, sessionRepository: ISessionRepository, saveFileAgent: ISaveFile ) {
     this.userRepository = userRepository;
     this.sessionRepository = sessionRepository;
     this.saveFileAgent = saveFileAgent;
   }
 
-  // Corrigir... deve gerar o documento com o ip da requisição e não da sessão
   public execute({ token }: IGenerateRequest): boolean {
     const authUser = this.sessionRepository.getSession(token);
 
